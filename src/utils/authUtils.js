@@ -71,8 +71,8 @@ export const checkTokenValidity = async () => {
         localStorage.setItem("authTokens", data);
         return true;
       } else {
-        localStorage.setItem("authTokens", {});
-        localStorage.setItem("user", {});
+        localStorage.setItem("authTokens", null);
+        localStorage.setItem("user", null);
         return false;
       }
     }
@@ -113,12 +113,6 @@ export const userLogIn = async (username, password, accessToken) => {
 };
 
 export const getUserDetails = async (username, email, accessToken) => {
-  console.log(
-    JSON.stringify({
-      username: username,
-      email: email,
-    })
-  );
   try {
     const res = await fetch("http://127.0.0.1:8000/get-user-details/", {
       method: "POST",

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserAuthContext } from "../providers/authProvider";
-import { logOutUser } from "../utils/authUtils";
+import { checkTokenValidity, logOutUser } from "../utils/authUtils";
 import { useNavigate } from "react-router-dom";
 
 import "../styles/pages/homepage.css";
@@ -14,6 +14,8 @@ const HomePage = () => {
   useEffect(() => {
     if (!authTokens || !userDetails) {
       navigate("/login");
+    } else {
+      const isValid = checkTokenValidity();
     }
   }, [authTokens, userDetails]);
 
