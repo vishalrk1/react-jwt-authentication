@@ -1,0 +1,41 @@
+.main-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    background-color: #6a62d2;
+    color: white;
+    border-bottom: 1px solid;
+}
+
+.routes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 20px;
+    align-items: center;
+}
+
+.title-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.auth-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px;
+    align-items: center;
+}
+
+.user-pfp {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}

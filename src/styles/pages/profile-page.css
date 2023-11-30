@@ -1,0 +1,83 @@
+.main-profilepage {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+    filter:drop-shadow(0 0 1px #000000);
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+.image-container-1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background: #6a62d2;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+.user-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 24px;
+}
+
+.profile-image {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.details-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 8px;
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+.details-container input {
+    background: #f2f2f2;
+    border-radius: 8px;
+    width: 90%;
+    border: 0;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.details-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.edit-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 8px;
+}

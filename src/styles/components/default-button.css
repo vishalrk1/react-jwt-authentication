@@ -1,0 +1,10 @@
+.main-defaultbutton {
+    padding: 12px;
+    background-color: #6a62d2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
