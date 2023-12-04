@@ -68,7 +68,7 @@ export const checkTokenValidity = async () => {
 
       if (refreshResponse.ok) {
         const data = await res.json();
-        localStorage.setItem("authTokens", data);
+        localStorage.setItem("authTokens", JSON.stringify(data));
         return true;
       } else {
         localStorage.setItem("authTokens", null);

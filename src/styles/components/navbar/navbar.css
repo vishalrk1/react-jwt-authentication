@@ -18,24 +18,27 @@
     align-items: center;
 }
 
+.nav-route {
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.nav-route:hover {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .title-name {
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .auth-button-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     margin: 20px;
     align-items: center;
-}
-
-.user-pfp {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
 }

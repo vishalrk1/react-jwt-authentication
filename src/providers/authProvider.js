@@ -34,7 +34,6 @@ export const UserDataProvider = ({ children }) => {
       setAuthTokens(authTokens);
       setUser(userDetails);
       getUserObj();
-      console.log('Updated User Data', user)
     }
   }, []);
 

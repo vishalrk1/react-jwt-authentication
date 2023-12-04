@@ -38,13 +38,13 @@
 
 .profile-image {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
     padding: 30px;
-    padding-bottom: 0px;
+    padding-bottom: 12px;
 }
 
 .details-container {

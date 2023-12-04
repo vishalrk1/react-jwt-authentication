@@ -5,14 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserDataProvider } from "./providers/authProvider";
 import { BrowserRouter } from "react-router-dom";
+import { CategoriesProvider } from "./providers/categoriesProvider";
+import { ProductsDataProvider } from "./providers/productsProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <UserDataProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <CategoriesProvider>
+        <ProductsDataProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ProductsDataProvider>
+      </CategoriesProvider>
     </UserDataProvider>
   </React.StrictMode>
 );

@@ -1,26 +1,17 @@
-import { useContext, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useNavigate,
 } from "react-router-dom";
-import { MainContext } from "./utils/contextData";
 import HomePage from "./pages/homepage";
-import { UserAuthContext, UserDataProvider } from "./providers/authProvider";
 import LoginPage from "./pages/login-pagr";
 import SignUpPage from "./pages/signup-page";
 import CreatUserProfilePage from "./pages/create-profile-page";
-import Navbar from "./components/navbar";
 import ProfilePage from "./pages/profile-page";
+import CategoryProductsPage from "./pages/category-products-page";
+import Navbar from "./components/navbar/navbar";
 
 function App() {
-  const { user, setUser, setAuthTokens } = useContext(UserAuthContext);
-  const navigate = useNavigate();
-  console.log(user);
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState();
-
   return (
     <>
       <Navbar />
@@ -30,6 +21,7 @@ function App() {
         <Route path="/signup" Component={SignUpPage}></Route>
         <Route path="/create-profile" Component={CreatUserProfilePage}/>
         <Route path="/profile" Component={ProfilePage} />
+        <Route path="/:cat_id/products" Component={CategoryProductsPage}/>
       </Routes>
     </>
   );

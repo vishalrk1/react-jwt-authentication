@@ -1,0 +1,21 @@
+.nav-user-box {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-pfp {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+}
+
+.username-text {
+    color: white;
+    font-weight: 500;
+}
