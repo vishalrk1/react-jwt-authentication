@@ -6,6 +6,7 @@ import { ProductsContext } from "../providers/productsProvider";
 import { getIndividualCategory } from "../utils/categoriesUtil";
 import { CategoriesContext } from "../providers/categoriesProvider";
 import DefaultButton from "../components/default-button";
+import ProductCard from "../components/product-card";
 
 const CategoryProductsPage = () => {
   const { cat_id } = useParams();
@@ -36,24 +37,7 @@ const CategoryProductsPage = () => {
           <div className="product-cards-container">
             {productsData &&
               productsData.map((product) => (
-                <div className="card-body">
-                  <div className="product-image-container">
-                    <img
-                      src={product.prod_image_url}
-                      alt="prod-id"
-                      className="product-image"
-                    />
-                  </div>
-                  <p className="product-title">{product.prod_title}</p>
-                  <div className="price-container">
-                    <p className="product-price-old">{`₹ ${product.prod_old_price}`}</p>
-                    <p className="product-price-new">{`₹ ${product.prod_price}`}</p>
-                  </div>
-                  <div className="btn-container">
-                    <DefaultButton>Add to cart</DefaultButton>
-                    <DefaultButton>Wishlist</DefaultButton>
-                  </div>
-                </div>
+                <ProductCard key={product.prod_id} product={product}/>
               ))}
           </div>
         </div>

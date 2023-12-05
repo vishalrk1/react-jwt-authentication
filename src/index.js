@@ -7,17 +7,20 @@ import { UserDataProvider } from "./providers/authProvider";
 import { BrowserRouter } from "react-router-dom";
 import { CategoriesProvider } from "./providers/categoriesProvider";
 import { ProductsDataProvider } from "./providers/productsProvider";
+import { CartDataProvider } from "./providers/cartDataProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <UserDataProvider>
       <CategoriesProvider>
-        <ProductsDataProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </ProductsDataProvider>
+        <CartDataProvider>
+          <ProductsDataProvider>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </ProductsDataProvider>
+        </CartDataProvider>
       </CategoriesProvider>
     </UserDataProvider>
   </React.StrictMode>

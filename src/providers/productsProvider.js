@@ -21,7 +21,6 @@ export const ProductsDataProvider = ({ children }) => {
 
       if (res.ok) {
         const data = await res.json();
-        console.log("products Data", data);
         setProductsData(data.productsData);
         setIsProdFetching(false);
       } else {

@@ -10,6 +10,7 @@ import CreatUserProfilePage from "./pages/create-profile-page";
 import ProfilePage from "./pages/profile-page";
 import CategoryProductsPage from "./pages/category-products-page";
 import Navbar from "./components/navbar/navbar";
+import CartPage from "./pages/cart-page";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/create-profile" Component={CreatUserProfilePage}/>
         <Route path="/profile" Component={ProfilePage} />
         <Route path="/:cat_id/products" Component={CategoryProductsPage}/>
+        <Route path="/cart" Component={CartPage}/>
       </Routes>
     </>
   );
